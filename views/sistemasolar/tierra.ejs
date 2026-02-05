@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tierra</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            align-items: flex-start;
+        }
+        /*.planeta {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border:1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            padding: 40px;
+            max-width: 800%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);*/
+        
+
+        .planeta-imagen {
+            flex: 1;
+            text-align: center;
+            min-width: 300px;
+        }
+
+        .planeta-imagen img {
+            width: 100%;
+            max-width: 300px;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(200, 200, 200, 0.4)); 
+        }
+        .planeta-info{
+            flex: 2;
+            padding: 20px;
+            min-width: 300px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #d1d1d1;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            color : #ccc;
+            margin-bottom: 20px;
+
+        }
+.stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-volver:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 15px white;
+        }
+
+        /* Animación sencilla para que la imagen flote */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="planeta">
+        <div class="planeta-imagen img ">
+          <img src="planetas/Tierra.png" alt="Planeta Tierra">
+        </div>
+        
+        <div class="planeta-info">
+            <h1>Tierra</h1>
+            <p>La Tierra es el tercer planeta desde el Sol y el único planeta conocido que alberga vida.
+                Es el más grande de los cuatro planetas rocosos del sistema solar y tiene una atmósfera densa que permite la existencia de agua líquida en su superficie.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-label">Diámetro</span>
+                    <span class="stat-value">12,756 km</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Temperatura</span>
+                    <span class="stat-value">15°C</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Lunas</span>
+                    <span class="stat-value">1</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Rotación</span>
+                    <span class="stat-value">24 horas</span>
+                </div>
+            </div>
+
+            <a href="sistema solar.html" class="btn-volver">← Volver al Sistema</a>
+        </div>
+    </div>
+
+            <p>Peso (Masa) y Densidad Masa: La Tierra tiene una masa de aproximadamente \(5.97\times 10^{24}\) kg (casi 6 cuatrillones de toneladas).<br>
+                Densidad: Es el planeta más denso del sistema solar, con una densidad media de \(5515\text{\ kg/m}^{3}\).<br>
+                Medidas y Dimensiones Diámetro: El diámetro en el ecuador es de \(12,756\text{\ km}\).Circunferencia: La circunferencia ecuatorial es de aproximadamente \(40,091\text{\ km}\).<br>
+                Radio: El radio medio volumétrico es de \(6,371\text{\ km}\).<br>
+                Forma: No es una esfera perfecta, es un esferoide oblato (achatado en los polos y abultado en el ecuador).<br>
+                Superficie: La superficie total es de unos \(510\text{\ millones\ de\ km}^{2}\), de los cuales aproximadamente el 71% es agua y el 29% tierra firme.3.<br>
+                Movimientos y Órbita Rotación (Día): Tarda aproximadamente 23.9 horas (un día sidéreo) en girar sobre su eje.<br>
+                Traslación (Año): Tarda \(365.26\text{\ días}\) en dar una vuelta al Sol.<b>
+                Inclinación del eje: Tiene una inclinación de \(23.45^{\circ }\), lo que provoca las estaciones del año.<br>
+                Velocidad de traslación: Orbita alrededor del Sol a una velocidad media de unos \(30\text{\ km/s}\) (\(107,000\text{\ km/h}\)). 4.<br>
+                Características Físicas y Composición Edad: Se estima que la Tierra se formó hace unos \(4,600\text{\ millones\ de\ años}\).<b>
+                Composición interna: Está formada principalmente por hierro (\(32.1\%\)), oxígeno (\(30.1\%\)), silicio (\(15.1\%\)) y magnesio (\(13.9\%\)).<br>
+                Estructura: Se divide en tres capas principales: corteza (superficial), manto y núcleo (hierro y níquel).<BR>
+                Atmósfera: Compuesta mayoritariamente por nitrógeno (\(78\%\)) y oxígeno (\(21\%\)).<BR>
+                Temperatura: La temperatura media de la superficie es de aproximadamente \(15^{\circ }\text{C}\), con variaciones extremas entre \(-88^{\circ }\text{C}\) y \(+58^{\circ }\text{C}\).5.<BR>
+                Posición y Satélites Posición:<BR>
+                Es el tercer planeta más cercano al Sol (\(150\text{\ millones\ de\ km}\) de distancia) y el quinto más grande del sistema solar.<BR>
+                Satélite Natural:<BR>
+                Posee un satélite, la Luna<BR>
+                Nota: La Tierra no tiene "peso" en el sentido tradicional, ya que este depende de la gravedad; en su lugar, se mide su masa. </p>
+           
+</body>
+</html>

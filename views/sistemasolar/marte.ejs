@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marte</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            align-items: flex-start;
+        }
+        /*.planeta {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border:1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            padding: 40px;
+            max-width: 800%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);*/
+        
+
+        .planeta-imagen {
+            flex: 1;
+            text-align: center;
+            min-width: 300px;
+        }
+
+        .planeta-imagen img {
+            width: 100%;
+            max-width: 300px;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(200, 200, 200, 0.4)); 
+        }
+        .planeta-info{
+            flex: 2;
+            padding: 20px;
+            min-width: 300px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #d1d1d1;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            color : #ccc;
+            margin-bottom: 20px;
+
+        }
+.stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-volver:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 15px white;
+        }
+
+        /* Animación sencilla para que la imagen flote */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="planeta">
+        <div class="planeta-imagen img ">
+          <img src="planetas/marte.png" alt="Planeta Marte">
+        </div>
+        
+        <div class="planeta-info">
+            <h1>Marte</h1>
+            <p> </p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-label">Diámetro</span>
+                    <span class="stat-value">6,779 km</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Temperatura</span>
+                    <span class="stat-value">-80°C a -10°C</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Lunas</span>
+                    <span class="stat-value">2</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Rotación</span>
+                    <span class="stat-value">24.6 horas</span>
+                </div>
+            </div>
+
+            <a href="sistema solar.html" class="btn-volver">← Volver al Sistema</a>
+        </div>
+    </div>
+            
+            <p><br><br><br>Marte, conocido como el "planeta rojo", es el cuarto planeta desde el Sol y el segundo más pequeño del sistema solar, después de Mercurio.<br>
+                Es un planeta rocoso (telúrico) con características fascinantes:<br>
+                Características Físicas y Medidas Diámetro: Aproximadamente 6,794 km (casi la mitad del tamaño de la Tierra).<br>
+                Masa (Peso): Aproximadamente \(6.42\times 10^{23}\) kg, lo que equivale a solo una décima parte de la masa terrestre.<br>
+                Gravedad: Es mucho menor que la de la Tierra.<br>
+                Una persona que pesa 50 kg en la Tierra, pesaría solo unos 19 kg en Marte.<br>
+                Densidad: 3.93 g/cm³.Superficie: Es rocosa, con coloración rojiza debido al óxido de hierro.<br>
+                Cuenta con volcanes, valles y desiertos.<br>
+                El Monte Olimpo: Es el volcán más grande del sistema solar y se encuentra en Marte.<br>
+                Atmósfera y Clima Atmósfera: Es muy fina y tenue, compuesta principalmente por un 95.32% de dióxido de carbono, 2.7% de nitrógeno y 0.17% de argón.<br>
+                Temperatura: Es un planeta frío, con una temperatura promedio de -62 °C.<br>
+                Puede alcanzar los 20 °C en verano, pero la media diaria es muy baja.<br>
+                Casquetes Polares: Marte tiene capas de hielo polar compuestas por agua helada y hielo seco.<br>
+                Órbita y Rotación Día Marciano (Sol): Dura 24 horas, 37 minutos y 22 segundos, muy similar al de la Tierra.<br>
+                Año Marciano: Tarda 687 días terrestres en completar una órbita alrededor del Sol.<br>
+                Estaciones: Experimenta estaciones similares a la Tierra debido a la inclinación de su eje.<br>
+                Satélites y Otros Datos Lunas:<br>
+                Tiene dos satélites pequeños: Fobos y Deimos.Color: Su color rojo característico proviene del óxido de hierro en su superficie.<br>
+                Edad: Se estima en aproximadamente 4.603 millones de años.<br>
+                Debido a su composición y características, es uno de los planetas más estudiados por la humanidad en busca de señales de vida pasada. </p>            
+           </body>
+</html>

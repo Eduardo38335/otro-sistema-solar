@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urano</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            align-items: flex-start;
+        }
+        /*.planeta {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border:1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            padding: 40px;
+            max-width: 800%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);*/
+        
+
+        .planeta-imagen {
+            flex: 1;
+            text-align: center;
+            min-width: 300px;
+        }
+
+        .planeta-imagen img {
+            width: 100%;
+            max-width: 300px;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(200, 200, 200, 0.4)); 
+        }
+        .planeta-info{
+            flex: 2;
+            padding: 20px;
+            min-width: 300px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #d1d1d1;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            color : #ccc;
+            margin-bottom: 20px;
+
+        }
+.stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-volver:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 15px white;
+        }
+
+        /* Animación sencilla para que la imagen flote */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="planeta">
+        <div class="planeta-imagen img ">
+          <img src="planetas/urano.png" alt="Planeta Urano">
+        </div>
+        
+        <div class="planeta-info">
+            <h1>Urano</h1>
+            <p>Urano es el séptimo planeta desde el Sol y el tercero más grande en diámetro en nuestro sistema solar.<br>
+                Es un gigante gaseoso conocido por su color azul verdoso, que se debe a la presencia de metano en su atmósfera.<br>
+                Urano tiene un sistema de anillos delgados y al menos 27 lunas conocidas.<br>
+                Una característica única de Urano es que rota de lado, con su eje de rotación casi paralelo a su órbita alrededor del Sol.<br></p>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-label">Diámetro</span>
+                    <span class="stat-value">47,628 km</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Temperatura</span>
+                    <span class="stat-value">-224°C</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Lunas</span>
+                    <span class="stat-value">27</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Rotación</span>
+                    <span class="stat-value">17 horas</span>
+                </div>
+            </div>
+
+            <a href="sistema solar.html" class="btn-volver">← Volver al Sistema</a>
+        </div>
+    </div>
+
+            <p>Urano es el séptimo planeta desde el Sol y se clasifica como un gigante helado.
+            Es conocido por su color azul verdoso característico y por rotar de lado.<br>
+            Tamaño y Medidas<br>
+            Diámetro ecuatorial:
+            Aproximadamente 51,118 kilómetros.<br>
+            Comparación de tamaño: Es unas 4 veces más ancho que la Tierra.<br>
+            Si la Tierra fuera una manzana, Urano sería del tamaño de una pelota de baloncesto.<br>
+            Radio: 25,362 km.Volumen: Equivale a unas 63 veces el volumen de la Tierra.<br>
+            Peso (Masa) y Gravedad Masa: \(8.682\times 10^{25}\) kg, lo que equivale a 14.53 veces la masa de la Tierra.<br>
+            Gravedad: A pesar de ser mucho más grande, su gravedad es solo un poco menor que la de la Tierra (aproximadamente el 89% de la terrestre) debido a su baja densidad.<br>
+            Órbita y Rotación Año (Órbita): Tarda aproximadamente 84 años terrestres en completar una vuelta al Sol.<br>
+            Día (Rotación): Un día en Urano dura aproximadamente 17 horas y 14 minutos.<br>
+            Inclinación peculiar: Urano gira "de lado" (su eje está inclinado unos 98 grados).<br>
+            Esto significa que sus polos apuntan casi directamente al Sol.<br>
+            Distancia al Sol Distancia promedio: Está a unos 2,900 millones de kilómetros del Sol, o aproximadamente 19.2 unidades astronómicas (UA).<br>
+            Luz solar: La luz del Sol tarda 2 horas y 40 minutos en llegar a Urano.<br>
+            Composición y Atmósfera Estructura: Está compuesto principalmente por fluidos densos y calientes de materiales helados (agua, amoníaco y metano) sobre un núcleo rocoso sólido.<br>
+            Atmósfera: Compuesta por hidrógeno, helio y metano.<br> 
+            El metano es el que le da el color azul-verdoso.Temperatura: Es uno de los planetas más fríos, con temperaturas superiores de la atmósfera que alcanzan los -220 °C.<br>
+            Lunas y Anillos Lunas: Urano tiene 27 lunas conocidas.Anillos: Posee al menos 13 anillos conocidos, delgados y oscuros.<br>
+            Dato extra Urano fue el primer planeta descubierto con un telescopio, en 1781 por William Herschel.</p>
+            
+           
+</body>
+</html>

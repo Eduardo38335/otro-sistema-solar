@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar 3D Interactivo</title>
+    <style>
+        /*-- 1. FONDO ESPACIAL (ESTRELLAS CSS) --*/
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            perspective: 1000px; /* Profundidad para el 3D */
+        }
+
+        #stars, #stars2, #stars3 {
+            position: absolute;
+            top: 0; left: 0;
+            background: transparent;
+            animation: animStar 100s linear infinite;
+        }
+        
+        #stars { width: 1px; height: 1px; z-index: -3; box-shadow: 1744px 122px #FFF, 134px 1321px #FFF, 92px 859px #FFF, 500px 200px #FFF, 1500px 750px #FFF, 50px 50px #FFF; }
+        #stars2 { width: 2px; height: 2px; z-index: -2; animation-duration: 150s; box-shadow: 100px 200px #FFF, 400px 600px #FFF, 1400px 300px #FFF, 1250px 50px #FFF; }
+        #stars3 { width: 3px; height: 3px; z-index: -1; animation-duration: 200s; box-shadow: 500px 500px #FFF, 1100px 200px #FFF; }
+
+        @keyframes animStar { from {transform: translateY(0px);} to {transform: translateY(-2000px);} }
+
+        /*-- 2. CONTENEDOR 3D --*/
+        .sistema-solar {
+            position: relative;
+            width: 1000px;
+            height: 1000px;
+            transform: rotateX(75deg); /* Inclinación de las órbitas */
+            transform-style: preserve-3d;
+        }
+
+        /*-- 3. SOL --*/
+        .sol {   
+            width: 80px; height: 80px;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) rotateX(-75deg); /* Mira de frente */
+            border-radius: 50%;
+            box-shadow: 0 0 60px orange;
+            z-index: 10;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .sol img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+        .sol span { position: absolute; top: -25px; color: white; text-shadow: 0 0 5px black; font-weight: bold; }
+
+        /*-- 4. ÓRBITAS DE NEÓN --*/
+        .orbit {
+            position: absolute;
+            top: 50%; left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+        }
+
+        /*-- 5. PLANETAS --*/
+        .planet {
+            position: absolute;
+            top: 50%; left: 50%;
+            z-index: 5;
+            display: flex; justify-content: center; align-items: center;
+            text-decoration: none;
+            transform-style: preserve-3d;
+        }
+        .planet img {
+            width: 100%; height: 100%;
+            object-fit: cover; border-radius: 50%;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            pointer-events: none;
+        }
+        .planet:hover { z-index: 100; }
+        .planet:hover img { filter: drop-shadow(0 0 15px white); }
+        .planet span {
+            position: absolute; top: -25px;
+            font-size: 12px; color: white; font-weight: bold;
+            text-shadow: 0 0 4px black;
+            backface-visibility: hidden;
+        }
+
+        /*-- 6. TAMAÑOS DE ÓRBITAS --*/
+        .orbit.mercurio {width: 140px; height: 140px;}
+        .orbit.venus    {width: 220px; height: 220px;}
+        .orbit.tierra   {width: 320px; height: 320px;}
+        .orbit.marte    {width: 420px; height: 420px;}
+        .orbit.jupiter  {width: 600px; height: 600px;}
+        .orbit.saturno  {width: 750px; height: 750px;}
+        .orbit.urano    {width: 880px; height: 880px;}
+        .orbit.neptuno  {width: 980px; height: 980px;}
+
+        /*-- 7. ANIMACIONES Y TAMAÑOS DE PLANETAS --*/
+        .planet.mercurio { width: 30px; height: 30px; animation: orbit-mercurio 4s linear infinite; }
+        .planet.venus    { width: 45px; height: 45px; animation: orbit-venus 7s linear infinite; }
+        .planet.tierra   { width: 50px; height: 50px; animation: orbit-tierra 10s linear infinite; }
+        .planet.marte    { width: 40px; height: 40px; animation: orbit-marte 15s linear infinite; }                
+        .planet.jupiter  { width: 90px; height: 90px; animation: orbit-jupiter 20s linear infinite; }
+        .planet.saturno  { width: 80px; height: 80px; animation: orbit-saturno 25s linear infinite; }
+        .planet.urano    { width: 60px; height: 60px; animation: orbit-urano 30s linear infinite; }
+        .planet.neptuno  { width: 58px; height: 58px; animation: orbit-neptuno 35s linear infinite; }
+
+        .planet:hover {
+                animation-play-state: paused;
+            }
+
+        /* KEYFRAMES: Mover, Alejar, Contra-rotar y Mirar al frente */
+        @keyframes orbit-mercurio { from {transform: rotate(0deg) translateX(70px) rotate(0deg) rotateX(-75deg);} to {transform: rotate(360deg) translateX(70px) rotate(-360deg) rotateX(-75deg);} }
+        @keyframes orbit-venus    { from {transform: rotate(0deg) translateX(110px) rotate(0deg) rotateX(-75deg);} to {transform: rotate(360deg) translateX(110px) rotate(-360deg) rotateX(-75deg);} }
+        @keyframes orbit-tierra   { from {transform: rotate(0deg) translateX(160px) rotate(0deg) rotateX(-75deg);} to {transform: rotate(360deg) translateX(160px) rotate(-360deg) rotateX(-75deg);} }
+        @keyframes orbit-marte    { from {transform: rotate(0deg) translateX(210px) rotate(0deg) rotateX(-75deg);} to {transform: rotate(360deg) translateX(210px) rotate(-360deg) rotateX(-75deg);} }
+        @keyframes orbit-jupiter  { from {transform: rotate(0deg) translateX(300px) rotate(0deg) rotateX(-75deg);} to {transform: rotate(360deg) translateX(300px) rotate(-360deg) rotateX(-75deg);} }
+        @keyframes orbit-saturno  { from {transform: rotate(0deg) translateX(375px) rotate(0deg) rotateX(-75deg);} to {transform: rotate(360deg) translateX(375px) rotate(-360deg) rotateX(-75deg);} }
+        @keyframes orbit-urano    { from {transform: rotate(0deg) translateX(440px) rotate(0deg) rotateX(-75deg);} to {transform: rotate(360deg) translateX(440px) rotate(-360deg) rotateX(-75deg);} }
+        @keyframes orbit-neptuno  { from {transform: rotate(0deg) translateX(490px) rotate(0deg) rotateX(-75deg);} to {transform: rotate(360deg) translateX(490px) rotate(-360deg) rotateX(-75deg);} }
+    </style>
+</head>
+<body>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <div class="sistema-solar">
+        
+        <div class="sol">
+            <img src="planetas/SOL.png" alt="Sol">
+            <span class="nombre">Sol</span>
+        </div>
+
+        <div class="orbit mercurio"></div>
+        <div class="orbit venus"></div>
+        <div class="orbit tierra"></div>
+        <div class="orbit marte"></div>
+        <div class="orbit jupiter"></div>
+        <div class="orbit saturno"></div>
+        <div class="orbit urano"></div>
+        <div class="orbit neptuno"></div>
+
+        <a href="mercurio.html" class="planet mercurio"><img src="planetas/MERCURIO.png" alt="Mercurio"><span>Mercurio</span></a>
+        <a href="venus.html" class="planet venus"><img src="planetas/VENUS.png" alt="Venus"><span>Venus</span></a>        
+        <a href="tierra.html" class="planet tierra"><img src="planetas/TIERRA.png" alt="Tierra"><span>Tierra</span></a>        
+        <a href="marte.html" class="planet marte"><img src="planetas/MARTE.png" alt="Marte"><span>Marte</span></a>        
+        <a href="jupiter.html" class="planet jupiter"><img src="planetas/JUPITER.png" alt="Júpiter"><span>Júpiter</span></a>        
+        <a href="saturno.html" class="planet saturno"><img src="planetas/SATURNO.png" alt="Saturno"><span>Saturno</span></a>        
+        <a href="urano.html" class="planet urano"><img src="planetas/URANO.png" alt="Urano"><span>Urano</span></a>        
+        <a href="neptuno.html" class="planet neptuno"><img src="planetas/neptuno.png" alt="neptuno"><span>Neptuno</span></a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let inicio = localStorage.getItem('inicioSistemaSolar');
+            if (!inicio) {
+                inicio = Date.now();
+                localStorage.setItem('inicioSistemaSolar', inicio);
+            }
+            const ahora = Date.now();
+            const segundosPasados = (ahora - inicio) / 1000;
+            const planetas = document.querySelectorAll('.planet');
+            planetas.forEach(planeta => {
+                planeta.style.animationDelay = `-${segundosPasados}s`;
+            });
+        });
+    </script>
+</body>
+</html>

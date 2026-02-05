@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neptuno</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            align-items: flex-start;
+        }
+        /*.planeta {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border:1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            padding: 40px;
+            max-width: 800%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);*/
+        
+
+        .planeta-imagen {
+            flex: 1;
+            text-align: center;
+            min-width: 300px;
+        }
+
+        .planeta-imagen img {
+            width: 100%;
+            max-width: 300px;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(200, 200, 200, 0.4)); 
+        }
+        .planeta-info{
+            flex: 2;
+            padding: 20px;
+            min-width: 300px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #d1d1d1;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            color : #ccc;
+            margin-bottom: 20px;
+
+        }
+.stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-volver:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 15px white;
+        }
+
+        /* Animación sencilla para que la imagen flote */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="planeta">
+        <div class="planeta-imagen img ">
+          <img src="planetas/neptuno.png" alt="Planeta Neptuno">
+        </div>
+        
+        <div class="planeta-info">
+            <h1>Neptuno</h1>
+            <p>El planeta más lejano del sistema solar y el octavo planeta desde el Sol.<br>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-label">Diámetro</span>
+                    <span class="stat-value">49,500 km</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Temperatura</span>
+                    <span class="stat-value">-218 °C a -200 °C</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Lunas</span>
+                    <span class="stat-value">14</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Rotación</span>
+                    <span class="stat-value">16 horas</span>
+                </div>
+            </div>
+
+            <a href="sistema solar.html" class="btn-volver">← Volver al Sistema</a>
+        </div>
+    </div>
+
+            <p><br><br>Neptuno es el octavo planeta desde el Sol y el más lejano de nuestro sistema solar.<br>
+                Es conocido como un gigante de hielo, famoso por su intenso color azul y sus vientos extremadamente rápidos.<br>
+                Aquí tienes los datos más importantes sobre Neptuno:<br>
+                Tamaño y Magnitud<br>
+                Diámetro: Aproximadamente 49,500 kilómetros en su línea ecuatorial, lo que lo hace unas 4 veces más ancho que la Tierra.<br>
+                Tamaño comparativo: Si la Tierra fuera del tamaño de una moneda de níquel, Neptuno sería aproximadamente del tamaño de una pelota de béisbol.<br>
+                Volumen: Es unas 72 veces más voluminoso que la Tierra.<br>
+                Masa y Peso (Gravedad)<br>
+                Masa: Su masa es de aproximadamente \(1.024\times 10^{26}\) kg, lo que equivale a unas 17 veces la masa de la Tierra.<br>
+                Densidad: Aunque es grande, es un planeta gigante gaseoso/helado, por lo que su densidad es baja en comparación con la Tierra (0.31 veces la de la Tierra).<br>
+                Gravedad: La gravedad en la parte superior de sus nubes es un poco superior a la de la Tierra (aprox. 1.14 veces la terrestre), pero al no tener superficie sólida, no se puede "caminar" sobre él.<br>
+                Distancia y Órbita<br>
+                Distancia al Sol: Está a una distancia promedio de 4,500 millones de kilómetros (o 30 unidades astronómicas, UA).<br>
+                Año en Neptuno (Órbita): Tarda unos 165 años terrestres en dar una vuelta completa alrededor del Sol.<br>
+                Día en Neptuno (Rotación): Su rotación es rápida; un día en Neptuno dura aproximadamente 16 horas.<br>
+                Atmósfera y Clima<br>
+                Temperatura: Es uno de los lugares más fríos del sistema solar. La temperatura en la parte superior de sus nubes es de unos -218 °C.<br>
+                Color: Su tono azul se debe al metano en su atmósfera, que absorbe la luz roja.<br>
+                Vientos: Tiene los vientos más rápidos del sistema solar, alcanzando velocidades de hasta 2,000 km/h (supersónicos).<br>
+                Estructura: No tiene una superficie sólida definida; su atmósfera de hidrógeno, helio y metano se mezcla con su interior formado por agua, amoníaco y hielo de metano.<br>
+                Lunas y Anillos<br>
+                Lunas: Se conocen 14 lunas, siendo la más grande Tritón.<br>
+                Anillos: Posee un sistema de anillos tenue y oscuro, descubiertos en 1984 y fotografiados por la sonda Voyager 2 en 1989.<br>
+                Exploración<br>
+                Voyager 2: Ha sido la única sonda espacial en visitar Neptuno, pasando cerca en 1989 y proporcionando la mayor parte de la información conocida sobre el planeta.
+            </body>
+            </html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Júpiter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            align-items: flex-start;
+        }
+        /*.planeta {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border:1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            padding: 40px;
+            max-width: 800%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);*/
+        
+
+        .planeta-imagen {
+            flex: 1;
+            text-align: center;
+            min-width: 300px;
+        }
+
+        .planeta-imagen img {
+            width: 100%;
+            max-width: 300px;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(200, 200, 200, 0.4)); 
+        }
+        .planeta-info{
+            flex: 2;
+            padding: 20px;
+            min-width: 300px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #d1d1d1;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            color : #ccc;
+            margin-bottom: 20px;
+
+        }
+.stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-volver:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 15px white;
+        }
+
+        /* Animación sencilla para que la imagen flote */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="planeta">
+        <div class="planeta-imagen img ">
+          <img src="planetas/JUPITER.png" alt="Planeta Júpiter">
+        </div>
+        
+        <div class="planeta-info">
+            <h1>Júpiter</h1>
+            <p>El planeta más grande de nuestro sistema solar y el quinto desde el Sol.
+                 Es solo un poco más grande que la Luna de la Tierra.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-label">Diámetro</span>
+                    <span class="stat-value">142,984 km</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Temperatura</span>
+                    <span class="stat-value">-110°C</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Lunas</span>
+                    <span class="stat-value">79</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Rotación</span>
+                    <span class="stat-value">9.9 horas</span>
+                </div>
+            </div>
+
+            <a href="sistema solar.html" class="btn-volver">← Volver al Sistema</a>
+        </div>
+    </div>
+
+            <p> <br><br>Júpiter es el planeta más grande del sistema solar,
+                un gigante gaseoso con un diámetro de aproximadamente 142,984 km (11 veces mayor que la Tierra) y una masa 318 veces superior a la terrestre. 
+                Compuesto principalmente de hidrógeno y helio, gira extremadamente rápido (día de 10 horas) y es famoso por la Gran Mancha Roja.<br>
+                Aquí tienes los datos técnicos detallados de Júpiter:<br>
+                Peso (Masa):<br>
+                 \(1.8981\times 10^{27}\text{\ kg}\) (más del doble de la masa de todos los demás planetas juntos).<br>
+                Diámetro:<br>
+                 \(\approx 142,984\text{\ km}\) en el ecuador, lo que significa que es aproximadamente 11.2 veces más ancho que la Tierra.<br>
+                Volumen:<br>
+                Equivale a 1,321 veces el volumen de la Tierra.<br>
+                Gravedad:<br>
+                 Muy superior a la Tierra, con una gravedad ecuatorial de \(24.79\text{\ m/s}^{2}\).<br>
+                Temperatura:<br>
+                La temperatura efectiva en las nubes superiores es de unos \(-148^{\circ }\text{C}\) a \(-160^{\circ }\text{C}\).<br>
+                Rotación (Día):<br>
+                Es el planeta que más rápido gira; un día dura solo 9 horas y 55 minutos.<br>
+                Traslación (Año):<br>
+                Tarda 11.8 años terrestres en dar una vuelta al Sol.<br>
+                Distancia al Sol:<br> Está a una media de 778 millones de km (5.2 UA).<br>
+                Está a una media de 778 millones de km (5.2 UA).<br>
+                Composición: Principalmente hidrógeno (\(H_{2}\)) y helio (\(He\)), similar a una estrella fallida.<br>
+                Lunas: Posee una gran cantidad de satélites naturales, con más de 79 identificados.<br>
+                    Es el quinto planeta desde el Sol y es conocido por sus bandas de nubes y tormentas gigantes, incluida la Gran Mancha Roja, una tormenta mayor que la Tierra.<br>
+</body>
+</html>
